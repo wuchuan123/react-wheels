@@ -1,0 +1,53 @@
+@import "../style/index";
+@import "../style/mixins/index";
+@import "./mixin";
+
+@btn-prefix-cls: centui-button;
+
+.@{btn-prefix-cls} {
+  line-height: @btn-line-height;
+  .btn;
+  .btn-default;
+
+  &-primary {
+    .btn-primary;
+  }
+
+  &-link {
+    .btn-link;
+  }
+
+  &-text {
+    .btn-text;
+  }
+
+  &-dashed {
+    .btn-dashed;
+  }
+
+  &-size-large {
+    width: 280px;
+  }
+
+  &-size-small {
+    width: 200px;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    height: 17px;
+    margin-right: 4px;
+
+    & > svg {
+      vertical-align: top;
+    }
+  }
+}
+
