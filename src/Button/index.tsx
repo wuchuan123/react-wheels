@@ -1,40 +1,61 @@
 import * as React from 'react';
-import classNames from "classnames";
+import classNames from 'classnames';
 // import  {createRef,useEffect} from "react";
-import lottie from 'lottie-web'
-import './index.less'
+import lottie from 'lottie-web';
+import './index.less';
+import './style.scss';
 
 interface Props {
-  type?: 'primary' | 'link' | 'text' | 'dashed'
-  className?: string
-  htmlType?: "button" | "submit" | "reset"
-  size?: 'large' | 'middle' | 'small'
-  disabled?: boolean
-  loading?: boolean
-  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void
-  loadingText?: string
-  [key:string]:any
-  href?:string
+  type?: 'primary' | 'link' | 'text' | 'dashed';
+  className?: string;
+  htmlType?: 'button' | 'submit' | 'reset';
+  size?: 'large' | 'middle' | 'small';
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>,
+  ) => void;
+  loadingText?: string;
+  [key: string]: any;
+  href?: string;
 }
 
-const prefixCls = 'centui-button'
+const prefixCls = 'centui-button';
 
-const Button: React.FC<Props> = (props) => {
-  const {type, className, htmlType, size, disabled, loading, onClick, children, loadingText,block,href,...other} = props
-  const loadingLogRef = React.createRef<any>()
+const Button: React.FC<Props> = props => {
+  const {
+    type,
+    className,
+    htmlType,
+    size,
+    disabled,
+    loading,
+    onClick,
+    children,
+    loadingText,
+    block,
+    href,
+    ...other
+  } = props;
+  const loadingLogRef = React.createRef<any>();
 
-  const classes = classNames({
-    [prefixCls]: true,
-    [`${prefixCls}-${type}`]: true,
-    [`${prefixCls}-size-${size}`]: true,
-    [`${prefixCls}-block`]:block
-  }, className)
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
+  const classes = classNames(
+    {
+      [prefixCls]: true,
+      [`${prefixCls}-${type}`]: true,
+      [`${prefixCls}-size-${size}`]: true,
+      [`${prefixCls}-block`]: block,
+    },
+    className,
+  );
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>,
+  ) => {
     if (disabled || loading) {
-      return
+      return;
     }
-    onClick?.(e)
-  }
+    onClick?.(e);
+  };
 
   React.useEffect(() => {
     if (loading) {
@@ -43,27 +64,34 @@ const Button: React.FC<Props> = (props) => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        animationData: require(`../assets/json/${type}-loading.json`)
-      })
+        animationData: require(`../assets/json/${type}-loading.json`),
+      });
     }
-  }, [loading])
+  }, [loading]);
 
   return (
-    <button className={classes} type={htmlType} disabled={disabled} onClick={handleClick}  {...other}>
+    <button
+      className={classes}
+      type={htmlType}
+      disabled={disabled}
+      onClick={handleClick}
+      {...other}
+    >
       {!loading && children}
-      {loading &&
-      <>
-        <span className={`${prefixCls}-img`} ref={loadingLogRef}>
-          {loadingText || children || 'loading'}
-        </span>
-      </>}
+      {loading && (
+        <>
+          <span className={`${prefixCls}-img`} ref={loadingLogRef}>
+            {loadingText || children || 'loading'}
+          </span>
+        </>
+      )}
     </button>
-  )
-}
+  );
+};
 
 Button.defaultProps = {
   className: '',
-  htmlType: 'button'
-}
+  htmlType: 'button',
+};
 
-export default Button
+export default Button;
