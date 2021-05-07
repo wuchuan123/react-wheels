@@ -1,0 +1,189 @@
+@import "./src/style/common";
+
+$minWidth: 100px;
+$minHeight: 35px;
+$fontSize: 14px;
+$fontWeight: 400;
+$borderRadius: 0px;
+$textColor: #FFFFFF;
+$progressColor: rgba(0, 0, 0, .15);
+$primaryColor: rgba(88, 103, 221, 1);
+$secondaryColor: rgba(108, 117, 125, 1);
+$darkColor: rgba(66, 78, 106, 1);
+$lightColor: rgba(183, 186, 191, 1);
+$greenColor: rgba(37, 162, 51, 1);
+$redColor: rgba(244, 81, 108, 1);
+$yellowColor: rgba(255, 193, 7, 1);
+$tealColor: rgba(0, 181, 173, 1);
+$violetColor: rgba(100, 53, 201, 1);
+$blueColor: rgba(66, 153, 225, 1);
+$outlinePrimaryColor: rgba(88, 103, 221, .3);
+$outlineSecondaryColor: rgba(108, 117, 125, .3);
+$outlineDarkColor: rgba(66, 78, 106, .3);
+$outlineLightColor: rgba(214, 212, 212, .3);
+$outlineGreenColor: rgba(37, 162, 51, .3);
+$outlineRedColor: rgba(244, 81, 108, .3);
+$outlineYellowColor: rgba(255, 193, 7, .3);
+$outlineTealColor: rgba(0, 181, 173, .3);
+$outlineVioletColor: rgba(100, 53, 201, .3);
+$outlineBlueColor: rgba(66, 153, 225, .3);
+
+.centui-wrapper {
+  display: inline-block;
+  min-width: $minWidth;
+  height: $minHeight;
+
+  &.block {
+    width: 100%;
+  }
+
+  &.tiny {
+    min-width: $minWidth - 35px;
+    height: $minHeight - 11px;
+
+    .centui-btn {
+      font-size: $fontSize - 4px;
+      line-height: 1;
+    }
+  }
+
+  &.small {
+    min-width: $minWidth - 25px;
+    height: $minHeight - 5px;
+
+    .centui-btn {
+      font-size: $fontSize - 2px;
+    }
+  }
+
+  &.large {
+    min-width: $minWidth + 25px;
+    height: $minHeight + 5px;
+
+    .centui-btn {
+      font-size: $fontSize + 2px;
+    }
+  }
+
+
+  .centui-btn {
+    padding: 6px 14px 6px;
+    font-size: $fontSize;
+    @include font-medium;
+    width: 100%;
+    color: $textColor;
+    text-align: center;
+    line-height: 1.5;
+    text-decoration: none;
+    user-select: none;
+    background-color: $primaryColor;
+    vertical-align: middle;
+    border-radius: $borderRadius;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .2);
+    transition: .1s;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+
+    &.outline {
+      background-color: transparent !important;
+    }
+
+    &.primary.outline {
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      box-shadow: inset 0 -1px 0 $primaryColor;
+    }
+
+    &.secondary {
+      background-color: $secondaryColor;
+
+      &.outline {
+        border: 1px solid $secondaryColor;
+        color: $secondaryColor;
+        box-shadow: inset 0 -1px 0 $secondaryColor;
+      }
+    }
+
+    &.dark {
+      background-color: $darkColor;
+
+      &.outline {
+        border: 1px solid $darkColor;
+        color: $darkColor;
+        box-shadow: inset 0 -1px 0 $darkColor;
+      }
+    }
+
+    &.light {
+      background-color: $lightColor;
+
+      &.outline {
+        border: 1px solid $lightColor;
+        color: $lightColor;
+        box-shadow: inset 0 -1px 0 $lightColor;
+      }
+    }
+
+    &.green {
+      background-color: $greenColor;
+
+      &.outline {
+        border: 1px solid $greenColor;
+        color: $greenColor;
+        box-shadow: inset 0 -1px 0 $greenColor;
+      }
+    }
+
+    &.red {
+      background-color: $redColor;
+
+      &.outline {
+        border: 1px solid $redColor;
+        color: $redColor;
+        box-shadow: inset 0 -1px 0 $redColor;
+      }
+    }
+
+    &.yellow {
+      background-color: $yellowColor;
+
+      &.outline {
+        border: 1px solid $yellowColor;
+        color: $yellowColor;
+        box-shadow: inset 0 -1px 0 $yellowColor;
+      }
+    }
+
+    &.teal {
+      background-color: $tealColor;
+
+      &.outline {
+        border: 1px solid $tealColor;
+        color: $tealColor;
+        box-shadow: inset 0 -1px 0 $tealColor;
+      }
+    }
+
+    &.violet {
+      background-color: $violetColor;
+
+      &.outline {
+        border: 1px solid $violetColor;
+        color: $violetColor;
+        box-shadow: inset 0 -1px 0 $violetColor;
+      }
+    }
+
+    &.blue {
+      background-color: $blueColor;
+
+      &.outline {
+        border: 1px solid $blueColor;
+        color: $blueColor;
+        box-shadow: inset 0 -1px 0 $blueColor;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Button1
 ---
 
 # 按钮组件
@@ -7,55 +7,35 @@ title: Button
 ## Type
 
 ```tsx
-import React from 'react';
-import {Button} from 'cent-react-wheel'
-import '../md.less';
+import React, { useState } from 'react';
+import { CentButton } from 'cent-react-wheel';
+import '../md.scss';
 
 export default () => {
   return (
     <>
-      <Button type='primary'>Primary Button</Button>
-      <Button>Defult Button</Button>
-      <Button type="dashed">Dashed Button</Button>
-      <br/>
-      <Button type="text">Text Button</Button>
-      <Button type="link">Link Button</Button>
+      <CentButton size={'tiny'} idleText={'tiny'} />
+      <CentButton size={'small'} idleText={'small'} />
+      <CentButton size={'normal'} idleText={'normal'} />
+      <CentButton size={'large'} idleText={'large'} />
+      <br />
+      <CentButton color={'primary'} idleText={'primary'} />
+      <CentButton color={'secondary'} idleText={'secondary'} />
+      <CentButton color={'dark'} idleText={'dark'} />
+      <CentButton color={'light'} idleText={'light'} />
+      <CentButton color={'green'} idleText={'green'} />
+      <br />
+      <CentButton color={'red'} idleText={'red'} />
+      <CentButton color={'yellow'} idleText={'yellow'} />
+      <CentButton color={'teal'} idleText={'teal'} />
+      <CentButton color={'violet'} idleText={'violet'} />
+      <CentButton color={'blue'} idleText={'blue'} />
+      <br />
+      <CentButton color={'blue'} block={'block'} idleText={'block'} />
+      <CentButton color={'blue'} outline={'outline'} idleText={'outline'} />
+      <br />
+      <CentButton color={'blue'} disabled={false} idleText={'outline'} />
     </>
-  )
-}
-
-```
-
-## Size
-
-```tsx
-import React from 'react';
-import {Button} from 'cent-react-wheel'
-import '../md.less';
-
-export default () => {
-  const handleClick = () => {
-    console.log('点击了')
-    return(
-      <a href='https://www.baidu.com/'>xx</a>
-    )
-  }
-  return (
-    <>
-      <Button type='primary' size='large'>Primary Button</Button>
-      <Button size='middle'>Defult Button</Button>
-      <Button type='dashed' size='small'>Dashed Button</Button>
-      <br/>
-      <p>disabled:true</p>
-      <Button type='primary' disabled>Dashed Button</Button>
-      <br/>
-      <p>disabled:false</p>
-      <Button type='primary' disabled={false}>Dashed Button</Button>
-      <br/>
-      <Button type='primary' disabled={false} loading={true}>Dashed Button</Button>
-      <Button type='primary' disabled={false} onClick={handleClick}>Dashed Button</Button>
-    </>
-  )
-}
-
+  );
+};
 ```

@@ -1,0 +1,113 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+div, dl, dt, dd, form, h1, h2, h3, h4, h5, h6, img, ol, ul, li, table, th, td, p, span, a {
+  border: 0;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+html {
+  //overflow-y: hidden;
+  -webkit-text-size-adjust: none;
+  //font-size: 62.5% !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+th, td, input {
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+input, button, a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0 none !important;
+  // cursor: pointer;
+  font-size: inherit;
+  background-color: transparent;
+}
+
+select {
+  border-width: 1px;
+  _zoom: 1;
+  border-style: solid;
+  padding-top: 2px;
+  font-size: 12px;
+}
+
+textarea {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  vertical-align: middle;
+}
+
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+.video embed, .video object, .video iframe {
+  width: 100%;
+  height: auto;
+}
+
