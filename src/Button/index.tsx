@@ -70,7 +70,6 @@ const CentButton = (props: any) => {
     type = 'button',
     idleText = 'Click Me',
     style = {},
-    ...rest
   } = props;
   const className = `centui-btn${props.className ? ' ' + props.className : ''}`;
   const loadingText =
@@ -137,6 +136,7 @@ const CentButton = (props: any) => {
         return idleText;
     }
   };
+  console.log(className, 'classname');
   return (
     <>
       <span
@@ -155,7 +155,6 @@ const CentButton = (props: any) => {
           data-button-state={buttonState}
           onClick={onClickHandle}
           style={style}
-          {...rest}
         >
           <span className="centui-progress" />
           <span className="content">
