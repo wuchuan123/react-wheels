@@ -1,6 +1,7 @@
 {
   "name": "cent-react-wheel",
   "version": "1.0.0",
+  "homepage": "https://wuchuan123.github.io/cent-react-wheels/",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
