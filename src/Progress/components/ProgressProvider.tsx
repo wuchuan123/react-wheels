@@ -1,5 +1,4 @@
 import React, { Component, Children } from 'react';
-import PropTypes from 'prop-types';
 // @ts-ignore
 import { Tweenable } from 'shifty';
 
@@ -24,10 +23,6 @@ const stepsConfig = {
 const noOp = () => {};
 
 export default class ProgressProvider extends Component<any, any> {
-  static propTypes = {
-    isLoading: PropTypes.bool,
-    children: PropTypes.element,
-  };
   private _tweenable: any;
 
   constructor(props: any) {

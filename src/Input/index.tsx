@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { string, func, number, bool, shape, node } from 'prop-types';
 
 import formatCurrency from './format-currency';
 
@@ -183,21 +182,6 @@ const IntlCurrencyInput = ({
       onKeyUp={handleKeyUp}
     />
   );
-};
-
-IntlCurrencyInput.propTypes = {
-  defaultValue: number,
-  value: number,
-  max: number,
-  component: node.isRequired,
-  currency: string.isRequired,
-  autoFocus: bool.isRequired,
-  autoSelect: bool.isRequired,
-  autoReset: bool.isRequired,
-  onChange: func.isRequired,
-  onBlur: func.isRequired,
-  onFocus: func.isRequired,
-  onKeyPress: func.isRequired,
 };
 
 IntlCurrencyInput.defaultProps = {
