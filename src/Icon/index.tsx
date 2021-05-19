@@ -10,7 +10,7 @@ interface IconProps {
   onClick?: Function;
 }
 
-const IconBlur = (props: IconProps) => {
+const IconBlur: React.FC<IconProps> = props => {
   const { type, src, size, padding, name, onClick } = props;
   return (
     <div className="icon-wrapper" onClick={() => onClick && onClick()}>
