@@ -89,6 +89,7 @@ export default ({ theme }) => {
             theme={theme}
             value={lightWeight}
             onChange={() => setLightWeight(!lightWeight)}
+            disabled={true}
           >
             单选
           </Checkbox>
@@ -98,3 +99,15 @@ export default ({ theme }) => {
   );
 };
 ```
+
+## Props
+
+| 属性          | 类型                              | 说明                 | 默认值 |
+| ------------- | --------------------------------- | -------------------- | ------ |
+| children      | `React.ReactNode`                 | 复选框附近的节点     | -      |
+| disabled      | `boolean`                         | 是否禁用             | false  |
+| indeterminate | `boolean`                         | 添加样式后仅可见状态 | false  |
+| modification  | `string`                          | 修改复选框的类名     | null   |
+| onChange      | `(event: SyntheticEvent) => void` | 改变时的回调         | -      |
+| theme         | `string`                          | 类名前缀             | null   |
+| value         | `boolean`                         | 是否选中             | false  |

@@ -11,7 +11,7 @@ interface IconProps {
 }
 
 const IconBlur: React.FC<IconProps> = props => {
-  const { type, src, size, padding, name, onClick } = props;
+  const { type = 'ROUNDED', src, size, padding, name, onClick } = props;
   return (
     <div className="icon-wrapper" onClick={() => onClick && onClick()}>
       <div className={`icon-container ${onClick ? 'pointer' : ''}`}>

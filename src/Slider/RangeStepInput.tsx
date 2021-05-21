@@ -13,7 +13,6 @@ type Props = {
   disabled?: boolean;
   onChange?: (n: any) => void;
   onClick?: (e: React.MouseEvent<HTMLInputElement>) => void;
-
   hold?: boolean;
 };
 export const RangeStepInput: React.FC<Props> = props => {

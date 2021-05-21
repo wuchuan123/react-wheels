@@ -99,3 +99,29 @@ export default () => {
   );
 };
 ```
+
+## Props
+
+| 属性            | 类型                                                                                 | 说明                  | 默认值     |
+| --------------- | ------------------------------------------------------------------------------------ | --------------------- | ---------- |
+| buttonState     | `'idle' 'loading' 'success' 'error'`                                                 | 当前 button 状态      | 'idle'     |
+| onClick         | `function`                                                                           | 点击 button 的回调    | () => {}   |
+| color           | `'primary' 'secondary' 'dark' 'light' 'green' 'red' 'yellow' 'teal' 'violet' 'blue'` | button 颜色           | 'primary'  |
+| idleText        | `string \| ReactNode`                                                                | button 静止时的文本   | 'Click Me' |
+| loadingText     | `string \| ReactNode`                                                                | button 加载时的文本   | 'Loading'  |
+| successText     | `string \| ReactNode`                                                                | button 加载成功的文本 | 'Success'  |
+| errorText       | `string \| ReactNode`                                                                | button 加载失败的文本 | 'Error'    |
+| type            | `'button' 'submit' 'reset'`                                                          | button 类型属性       | 'button'   |
+| className       | `string`                                                                             | classnames            | ''         |
+| style           | `React.CSSProperties`                                                                | style                 | {}         |
+| outline         | `boolean`                                                                            | 只有边框              | false      |
+| shadow          | `boolean`                                                                            | 阴影                  | false      |
+| rounded         | `boolean`                                                                            | 圆角                  | false      |
+| size            | `'tiny' 'small' 'normal' 'large'`                                                    | 大小                  | 'normal'   |
+| block           | `boolean`                                                                            | block                 | false      |
+| messageDuration | `number`                                                                             | 成功或者失败的延时    | 2000       |
+| disabled        | `boolean`                                                                            | button 是否禁用       | false      |
+| buttonRef       | `React.Ref \| null`                                                                  | button 引用           | null       |
+| width           | `string \| null`                                                                     | 覆盖宽度              | null       |
+| height          | `string \| null`                                                                     | 覆盖高度              | null       |
+| animation       | `boolean`                                                                            | 动画                  | true       |

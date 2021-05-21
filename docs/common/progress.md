@@ -31,6 +31,7 @@ export default () => {
         className="fixed-progress-bar"
         color="#4285F4"
         height="4px"
+        useBoxShadow={true}
       />
       <br />
       <div className="button-row">
@@ -42,3 +43,13 @@ export default () => {
   );
 };
 ```
+
+## Props
+
+| 属性         | 说明         | 类型      | 默认值 |
+| ------------ | ------------ | --------- | ------ |
+| isLoading    | 加载的状态   | `boolan`  | -      |
+| color        | 进度条的颜色 | `string`  | -      |
+| height       | 进度条高度   | `string`  | -      |
+| className    | 类名         | `string`  | -      |
+| useBoxShadow | 是否使用阴影 | `boolean` | -      |

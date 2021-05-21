@@ -65,3 +65,19 @@ export default () => {
   );
 };
 ```
+
+## Props
+
+| 属性         | 类型       | 说明                         | 默认值 |
+| ------------ | ---------- | ---------------------------- | ------ |
+| defaultValue | `number`   | 第一次加载时的默认值         | 0      |
+| currency     | `string`   | 币种                         | USD    |
+| config       | `object`   | 币种的相关配置               | -      |
+| autoFocus    | `boolean`  | 是否自动焦点                 | false  |
+| autoSelect   | `boolean`  | 是否自动选择组件             | false  |
+| autoReset    | `boolean`  | 失去焦点时是否自动重置 input | false  |
+| onChange     | `function` | 值改变的回调                 | -      |
+| onFocus      | `function` | 获得焦点的回调               | -      |
+| onBlur       | `function` | 失去焦点的回调               | -      |
+| onKeyPress   | `function` | 按下键盘的回调               | -      |
+| max          | `number`   | 最大值                       | -      |

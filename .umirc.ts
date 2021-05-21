@@ -5,9 +5,9 @@ let BaseUrl = '/cent-react-wheels';
 export default defineConfig({
   title: 'cent-react-wheel',
   favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://cdn.zaticdn.com/if/zaif-cps-seagull-service/20210520/camel_4344.png',
   logo:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://cdn.zaticdn.com/if/zaif-cps-seagull-service/20210520/camel_4344.png',
   outputPath: 'docs-dist',
   // more config: https://d.umijs.org/config
   base: BaseUrl,
