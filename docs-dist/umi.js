@@ -43,7 +43,7 @@
   }
   (a.e = function(e) {
     var t = [],
-      n = { 1: 1, 3: 1, 15: 1 };
+      n = { 1: 1, 2: 1, 3: 1, 15: 1 };
     r[e]
       ? t.push(r[e])
       : 0 !== r[e] &&
@@ -22200,36 +22200,18 @@
               meta: {
                 filePath: 'docs/index.md',
                 updatedTime: 1621592924e3,
-                hero: null,
-                title: 'cent-react-wheel',
-                desc: 'zati-ui-web site example',
-                actions: [{ text: 'Getting Started' }],
-                link: '/guide',
-                features: [
+                slugs: [
                   {
-                    icon:
-                      'https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png',
-                    title: 'Feature 1',
-                    desc: '<div class="markdown"><p>ddddd</p></div>',
+                    depth: 1,
+                    value: 'cent-react-wheels',
+                    heading: 'cent-react-wheels',
                   },
-                  {
-                    icon:
-                      'https://gw.alipayobjects.com/zos/bmw-prod/d60657df-0822-4631-9d7c-e7a869c2f21c/k79dmz3q_w126_h126.png',
-                    title: 'Feature 2',
-                    desc: '<div class="markdown"><p>Balabala</p></div>',
-                  },
-                  {
-                    icon:
-                      'https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png',
-                    title: 'Feature 3',
-                    desc: '<div class="markdown"><p>Balabala</p></div>',
-                    footer:
-                      'Open-source MIT Licensed | Copyright \xa9 2020<br />Powered by [dumi](https://d.umijs.org)',
-                  },
+                  { depth: 2, value: '\u5b89\u88c5', heading: '\u5b89\u88c5' },
+                  { depth: 1, value: '\u94fe\u63a5', heading: '\u94fe\u63a5' },
                 ],
-                slugs: [],
+                title: 'cent-react-wheels',
               },
-              title: 'cent-react-wheel',
+              title: 'cent-react-wheels',
             },
             {
               path: '/common/button',
